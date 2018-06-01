@@ -1,8 +1,8 @@
 # cloud-sdk-jdk8
 
-When deploying Java 8 webapps to AppEngine standard environment (on Google Cloud Platform), I ran into issues when using the Google-provided Docker image `google/cloud-sdk:latest` as it contains only Java 7 and I got error messages related to compiling the JSP files upon deploy (see below).
+When deploying Java 8 webapps to Google App Engine standard environment (on Google Cloud Platform), I ran into issues when using the Google-provided Docker image `google/cloud-sdk:latest` as it contains only Java 7 and I got error messages related to compiling the JSP files upon deploy (see below).
 
-Installing the OpenJDK v8 solves the issue. This is done using the `jessie-backports` repo as Google's image builds upon Debian Jessie. The results is an image that can deploy java 8 webapps with JSPs without any issues. (It might struggle with Java 7 apps though!)
+Installing the OpenJDK v8 in the image solves the issue. This is done using the `jessie-backports` repo as Google's image builds upon Debian Jessie. The results is an image that can deploy java 8 webapps with JSPs without any issues. (It might struggle with Java 7 apps though!)
 
 Just use this image as a drop-in replacement of `google/cloud-sdk:latest`
 
